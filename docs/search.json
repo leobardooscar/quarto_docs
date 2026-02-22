@@ -194,7 +194,7 @@
     "href": "index.html#academic-degrees",
     "title": "Leobardo Oscar Alcántara Ocaña",
     "section": "➔ Academic Degrees",
-    "text": "➔ Academic Degrees\n\n1996 B.A. in Communication Sciences - ITESO University, Guadalajara México.\n2012 M.A. in Communication of Science & Culture - ITESO University, Guadalajara México.\n\n\n\n➔ Skills & Capabilities\n\nTechnical ✒\n\nWeb content administration with Drupal & WordPress.\nDocumentation of projects and procedures.\nGUI customization (theming) of Repositories, Catalogs & Integrated Library Systems like Aleph, DSpace & Vufind.\nWork comfortably with Windows, Mac, or Linux.\n\n\n\nCommunication ✒\n\nFacilitate effective and meaningful communication, by mediating the request and response process between developers, staff, and end users of online information systems.",
+    "text": "➔ Academic Degrees\n\n1996 B.A. in Communication Sciences - ITESO University, Guadalajara México.\n2012 M.A. in Communication of Science & Culture - ITESO University, Guadalajara México.",
     "crumbs": [
       "Home"
     ]
@@ -374,7 +374,7 @@
     "href": "index.html#personal-information",
     "title": "Leobardo Oscar Alcántara Ocaña",
     "section": "➔ Personal Information",
-    "text": "➔ Personal Information\n\nBorn: July 6th, 1972 / México City (CDMX, former D.F.).\nCitizenship: Mexican\n\n\n\n\n\n\n\nTipCONTACT\n\n\n\n\nleobardo@iteso.mx\nleobardooscar@gmail.com\n\n\n\n\n➔ Academic Degrees\n\n1996 B.A. in Communication Sciences - ITESO University, Guadalajara México.\n2012 M.A. in Communication of Science & Culture - ITESO University, Guadalajara México.\n\n\n\n\n➔ Work experience\n\n1999 – 2020 Web Designer & Web Content Manager. “Dr. Jorge Villalobos Padilla” Library. ITESO University. 97 – 2003 University’s Web Portal Content Manager. ITESO University.\n99 – 2001; 2011 Reference librarian. ITESO University.\n2007 – 2008 Reference librarian. “Cultural Centre Library”. Supreme Court of Justice of the Nation (SCJN), Mexico.\n\n\n\n➔ Skills & Capabilities\n\nTechnical ✒\n\nWeb content administration with Drupal & WordPress.\nDocumentation of projects and procedures.\nGUI customization (theming) of Repositories, Catalogs & Integrated Library Systems like Aleph, DSpace & Vufind.\nWork comfortably with Windows, Mac, or Linux.\n\n\n\nCommunication ✒\n\nFacilitate effective and meaningful communication, by mediating the request and response process between developers, staff, and end users of online information systems.",
+    "text": "➔ Personal Information\n\nBorn: July 6th, 1972 / México City (CDMX, former D.F.).\nCitizenship: Mexican\n\n\n\n\n\n\n\nTipCONTACT\n\n\n\n\nleobardo@iteso.mx\nleobardooscar@gmail.com",
     "crumbs": [
       "Home"
     ]
@@ -427,6 +427,26 @@
     "text": "Note\n\n\n\nThis repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland.",
     "crumbs": [
       "About me"
+    ]
+  },
+  {
+    "objectID": "index.html#work-experience",
+    "href": "index.html#work-experience",
+    "title": "Leobardo Oscar Alcántara Ocaña",
+    "section": "➔ Work experience",
+    "text": "➔ Work experience\n\n1999 – 2020 Web Designer & Web Content Manager. “Dr. Jorge Villalobos Padilla” Library. ITESO University. 97 – 2003 University’s Web Portal Content Manager. ITESO University.\n99 – 2001; 2011 Reference librarian. ITESO University.\n2007 – 2008 Reference librarian. “Cultural Centre Library”. Supreme Court of Justice of the Nation (SCJN), Mexico.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#skills-capabilities",
+    "href": "index.html#skills-capabilities",
+    "title": "Leobardo Oscar Alcántara Ocaña",
+    "section": "➔ Skills & Capabilities",
+    "text": "➔ Skills & Capabilities\n\nTechnical ✒\n\nWeb content administration with Drupal & WordPress.\nDocumentation of projects and procedures.\nGUI customization (theming) of Repositories, Catalogs & Integrated Library Systems like Aleph, DSpace & Vufind.\nWork comfortably with Windows, Mac, or Linux.\n\n\n\nCommunication ✒\n\nFacilitate effective and meaningful communication, by mediating the request and response process between developers, staff, and end users of online information systems.",
+    "crumbs": [
+      "Home"
     ]
   }
 ]
