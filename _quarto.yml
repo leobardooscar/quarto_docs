@@ -1,9 +1,10 @@
 project: 
   type: website
+  output-dir: docs
 
 website: 
   page-navigation: true
-  title: "NOAA quarto simple" 
+  title: "Leobardo Oscar Alcantara Ocaña" 
   site-url: "https://nmfs-opensci.github.io/NOAA-quarto-simple" 
   repo-url: "https://github.com/nmfs-opensci/NOAA-quarto-simple"
   repo-actions: [edit, source, issue]
@@ -11,41 +12,36 @@ website:
   
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
-    left: "&copy; CC-1.0"
+    left: "2026 &copy; CC-1.0 Leobardo Oscar Ocana"
   
   sidebar:
     background: "#D9E3E4"
-    logo: "https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png"
+    logo: ""
     favicon: images/favicon.ico
     pinned: true
     align: center
     tools: 
       - icon: globe
-        href: https://nmfs-opensci.github.io
-        text: "NMFS Open Science"
+        href: https://linktr.ee/leobardo_oscar
+        text: "Linktree"
       - icon: github
-        href: https://github.com/nmfs-opensci
-        text: "NMFS OpenSci"
-
+        href: https://github.com/leobardooscar
+        text: "GitHub"
+      - icon: x
+        href: https://x.com/joshua_w_d
+        
     style: "docked"
     search: true
     collapse-level: 1
     contents:
       - href: index.qmd
         text: Home
-      - href: content/add-content.qmd
-        text: Add content
-      - href: content/customizing.qmd
-        text: Customizing
-      - href: content/rendering.qmd
-        text: Rendering
-      - href: content/rmarkdown.Rmd
-        text: R Markdown files
-      - href: content/code.qmd
-        text: Code in your files
-      - href: content/acknowledgements.qmd
-        text: Acknowledgements
-
+      - href: content/continuing_education.qmd
+        text: Further Education
+      - href: content/project_gallery.qmd
+        text: Project Gallery
+      - href: content/about_me.qmd
+        text: About me
 format:
   html:
     theme:

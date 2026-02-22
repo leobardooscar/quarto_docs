@@ -1,0 +1,432 @@
+[
+  {
+    "objectID": "content/add-content.html",
+    "href": "content/add-content.html",
+    "title": "Customize",
+    "section": "",
+    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation).",
+    "crumbs": [
+      "Add content"
+    ]
+  },
+  {
+    "objectID": "content/add-content.html#edit-and-add-your-pages",
+    "href": "content/add-content.html#edit-and-add-your-pages",
+    "title": "Customize",
+    "section": "",
+    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation).",
+    "crumbs": [
+      "Add content"
+    ]
+  },
+  {
+    "objectID": "content/add-content.html#add-your-pages-the-project",
+    "href": "content/add-content.html#add-your-pages-the-project",
+    "title": "Customize",
+    "section": "Add your pages the project",
+    "text": "Add your pages the project\n\nAdd the files to _quarto.yml",
+    "crumbs": [
+      "Add content"
+    ]
+  },
+  {
+    "objectID": "content/customizing.html",
+    "href": "content/customizing.html",
+    "title": "Basic Information:",
+    "section": "",
+    "text": "Basic Information:\n\n\n\nImage title\n\n\n\nName Leobardo Oscar Alcántara Ocaña\nI was born on July 6th, 1972 in México City, CDMX (former D.F.).\n\n\nContact\nleobardooscar@gmail.com  leobardo@iteso.mx\n\n\n\n\n➔ Academic degrees\n\n1996 B.A. in Communication Sciences - ITESO University, Guadalajara México.\n2012 M.A. in Communication of Science & Culture - ITESO University, Guadalajara México.\n\n\n\n\n➔ Work experience\n\n1999 – 2020 Web Designer & Web Content Manager. “Dr. Jorge Villalobos Padilla” Library. ITESO University. 97 – 2003 University’s Web Portal Content Manager. ITESO University.\n99 – 2001; 2011 Reference librarian. ITESO University.\n2007 – 2008 Reference librarian. “Cultural Centre Library”. Supreme Court of Justice of the Nation (SCJN), Mexico.\n\n\n\n\n➔ Skills & Capabilities\n\nTechnical ✒\n\nWeb content administration with Drupal & WordPress.\nDocumentation of projects and procedures.\nGUI customization (theming) of Repositories, Catalogs & Integrated Library Systems like Aleph, DSpace & Vufind.\nWork comfortably with Windows, Mac, or Linux.\n\n\n\nCommunication ✒\n\nFacilitate effective and meaningful communication, by mediating the request and response process between developers, staff, and end users of online information systems.",
+    "crumbs": [
+      "Customizing"
+    ]
+  },
+  {
+    "objectID": "content/rmarkdown.html",
+    "href": "content/rmarkdown.html",
+    "title": "R Markdown",
+    "section": "",
+    "text": "You can include R Markdown files in your project.",
+    "crumbs": [
+      "R Markdown files"
+    ]
+  },
+  {
+    "objectID": "content/rmarkdown.html#r-markdown",
+    "href": "content/rmarkdown.html#r-markdown",
+    "title": "R Markdown",
+    "section": "R Markdown",
+    "text": "R Markdown\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00",
+    "crumbs": [
+      "R Markdown files"
+    ]
+  },
+  {
+    "objectID": "content/rmarkdown.html#including-plots",
+    "href": "content/rmarkdown.html#including-plots",
+    "title": "R Markdown",
+    "section": "Including Plots",
+    "text": "Including Plots\nYou can also embed plots, for example:\n\n\n\n\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.",
+    "crumbs": [
+      "R Markdown files"
+    ]
+  },
+  {
+    "objectID": "content/code.html",
+    "href": "content/code.html",
+    "title": "Rendering with Code",
+    "section": "",
+    "text": "You can have code (R, Python or Julia) in your qmd file. You will need to have these installed on your local computer, but presumably you do already if you are adding code to your qmd files.\nx &lt;- c(5, 15, 25, 35, 45, 55)\ny &lt;- c(5, 20, 14, 32, 22, 38)\nlm(x ~ y)\n\n\nCall:\nlm(formula = x ~ y)\n\nCoefficients:\n(Intercept)            y  \n      1.056        1.326",
+    "crumbs": [
+      "Code in your files"
+    ]
+  },
+  {
+    "objectID": "content/code.html#modify-the-github-action",
+    "href": "content/code.html#modify-the-github-action",
+    "title": "Rendering with Code",
+    "section": "Modify the GitHub Action",
+    "text": "Modify the GitHub Action\nYou will need to change the GitHub Action in .github/workflows to install these and any needed packages in order for GitHub to be able to render your webpage. The GitHub Action install R since I used that in code.qmd. If you use Python or Julia instead, then you will need to update the GitHub Action to install those.\nIf getting the GitHub Action to work is too much hassle (and that definitely happens), you can alway render locally and publish to the gh-pages branch. If you do this, make sure to delete or rename the GitHub Action to something like\nrender-and-publish.old_yml\nso GitHub does not keep trying to run it. Nothing bad will happen if you don’t do this, but if you are not using the action (because it keeps failing), then you don’t need GitHub to run it.",
+    "crumbs": [
+      "Code in your files"
+    ]
+  },
+  {
+    "objectID": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
+    "href": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
+    "title": "Rendering with Code",
+    "section": "Render locally and publish to gh-pages branch",
+    "text": "Render locally and publish to gh-pages branch\nTo render locally and push up to the gh-pages branch, open a terminal window and then cd to the directory with the Quarto project. Type this in the terminal:\nquarto render gh-pages",
+    "crumbs": [
+      "Code in your files"
+    ]
+  },
+  {
+    "objectID": "content/acknowledgements.html",
+    "href": "content/acknowledgements.html",
+    "title": "About me",
+    "section": "",
+    "text": "Note\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\nThis repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland.",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "content/rendering.html",
+    "href": "content/rendering.html",
+    "title": "Rendering",
+    "section": "",
+    "text": "The repo includes a GitHub Action that will render (build) the website automatically when you make changes to the files. It will be pushed to the gh-pages branch.\nBut when you are developing your content, you will want to render it locally.",
+    "crumbs": [
+      "Rendering"
+    ]
+  },
+  {
+    "objectID": "content/rendering.html#step-1.-make-sure-you-have-a-recent-rstudio",
+    "href": "content/rendering.html#step-1.-make-sure-you-have-a-recent-rstudio",
+    "title": "Rendering",
+    "section": "Step 1. Make sure you have a recent RStudio",
+    "text": "Step 1. Make sure you have a recent RStudio\nHave you updated RStudio since about August 2022? No? Then update to a newer version of RStudio. In general, you want to keep RStudio updated and it is required to have a recent version to use Quarto.",
+    "crumbs": [
+      "Rendering"
+    ]
+  },
+  {
+    "objectID": "content/rendering.html#step-2.-clone-and-create-rstudio-project",
+    "href": "content/rendering.html#step-2.-clone-and-create-rstudio-project",
+    "title": "Rendering",
+    "section": "Step 2. Clone and create RStudio project",
+    "text": "Step 2. Clone and create RStudio project\nFirst, clone the repo onto your local computer. How? You can click File &gt; New Project and then select “Version Control”. Paste in the url of the repository. That will clone the repo on to your local computer. When you make changes, you will need to push those up.",
+    "crumbs": [
+      "Rendering"
+    ]
+  },
+  {
+    "objectID": "content/rendering.html#step-3.-render-within-rstudio",
+    "href": "content/rendering.html#step-3.-render-within-rstudio",
+    "title": "Rendering",
+    "section": "Step 3. Render within RStudio",
+    "text": "Step 3. Render within RStudio\nRStudio will recognize that this is a Quarto project by the presence of the _quarto.yml file and will see the “Build” tab. Click the “Render website” button to render to the _site folder.\nPreviewing: You can either click index.html in the _site folder and specify “preview in browser” or set up RStudio to preview to the viewer panel. To do the latter, go to Tools &gt; Global Options &gt; R Markdown. Then select “Show output preview in: Viewer panel”.",
+    "crumbs": [
+      "Rendering"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Leobardo Oscar Alcántara Ocaña",
+    "section": "",
+    "text": "|* Born: July 6th, 1972 / México City (CDMX, former D.F.). * Citizenship: Mexican",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#github-set-up",
+    "href": "index.html#github-set-up",
+    "title": "Leobardo Oscar Alcantara Ocana",
+    "section": "GitHub Set-up",
+    "text": "GitHub Set-up\n\nClick the green “use template” button to make a repository with this content. Make sure to make your repo public (since GitHub Pages doesn’t work on private repos unless you have a paid account) and check box to include all the branches (so that you get the gh-pages branch). \nTurn on GitHub Pages under Settings &gt; Pages . You will set pages to be made from the gh-pages branch and root directory. \nTurn on GitHub Actions under Settings &gt; Actions &gt; General \nEdit the repo description and Readme to add a link to the webpage. When you edit the description, you will see the link url in the url box or you can click on the Actions tab or the Settings &gt; Pages page to find the url.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#personal-info",
+    "href": "index.html#personal-info",
+    "title": "Leobardo Oscar Alcántara Ocaña",
+    "section": "Personal Info",
+    "text": "Personal Info",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#contact-information",
+    "href": "index.html#contact-information",
+    "title": "Leobardo Oscar Alcántara Ocaña",
+    "section": "➔ Contact Information",
+    "text": "➔ Contact Information\n\nBorn: July 6th, 1972 / México City (CDMX, former D.F.).\nCitizenship: Mexican\n\n\n\n\n\n\n\nTipe-mail:\n\n\n\n\n[leobardo@iteso.mx]\n[leobardooscar@gmail.com]\n\n\n\n\n\n➔ Academic Degrees\n\n1996 B.A. in Communication Sciences - ITESO University, Guadalajara México.\n2012 M.A. in Communication of Science & Culture - ITESO University, Guadalajara México.\n\n\n\n\n➔ Work experience\n\n1999 – 2020 Web Designer & Web Content Manager. “Dr. Jorge Villalobos Padilla” Library. ITESO University. 97 – 2003 University’s Web Portal Content Manager. ITESO University.\n99 – 2001; 2011 Reference librarian. ITESO University.\n2007 – 2008 Reference librarian. “Cultural Centre Library”. Supreme Court of Justice of the Nation (SCJN), Mexico.\n\n\n\n➔ Skills & Capabilities\n\nTechnical ✒\n\nWeb content administration with Drupal & WordPress.\nDocumentation of projects and procedures.\nGUI customization (theming) of Repositories, Catalogs & Integrated Library Systems like Aleph, DSpace & Vufind.\nWork comfortably with Windows, Mac, or Linux.\n\n\n\nCommunication ✒\n\nFacilitate effective and meaningful communication, by mediating the request and response process between developers, staff, and end users of online information systems.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#academic-degrees",
+    "href": "index.html#academic-degrees",
+    "title": "Leobardo Oscar Alcántara Ocaña",
+    "section": "➔ Academic Degrees",
+    "text": "➔ Academic Degrees\n\n1996 B.A. in Communication Sciences - ITESO University, Guadalajara México.\n2012 M.A. in Communication of Science & Culture - ITESO University, Guadalajara México.\n\n\n\n➔ Skills & Capabilities\n\nTechnical ✒\n\nWeb content administration with Drupal & WordPress.\nDocumentation of projects and procedures.\nGUI customization (theming) of Repositories, Catalogs & Integrated Library Systems like Aleph, DSpace & Vufind.\nWork comfortably with Windows, Mac, or Linux.\n\n\n\nCommunication ✒\n\nFacilitate effective and meaningful communication, by mediating the request and response process between developers, staff, and end users of online information systems.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "content/continuing_education.html",
+    "href": "content/continuing_education.html",
+    "title": "Continuing Education",
+    "section": "",
+    "text": "Certificate in Geomatics and Regional Planning. University of Guadalajara. The Mexican Commission for the Knowledge and Use of Biodiversity, CONABIO.\n\n\n\n\n\nCertificate in Linux Administration. ITESO University\n\n\n\n\n\nCertificate in Design and Production of Multimedia & Interactive Systems. ITESO University\n\n\n\n\n\n\n\n\nSearch & Retrieval of Statistic and Geographical Information: an update on new features and tools. UNAM - INEGI, México.\n\n\n\n\n\nOpen-source library services platform FOLIO. EBSCO Information Services & University of Guadalajara.\n\n\n\n\n\nThe Digital Map of Mexico platform. National System of Statistical and Geographical Information, INEGI. México.\n\n\n\n\n\nDrupal Camp. University of Guadalajara.\n\n\n\n\n\nOpen Access Journals. University of Guadalajara. Guadalajara, México.\n\n\n\n\n\nWeaving Academic E-learning Networks. ITESO University (International Workshop).\n\n\n\n\n\nDrupal Summit Latino. University of Guadalajara.\nIntellectual Property workshop. ITESO University.",
+    "crumbs": [
+      "Continuing Education"
+    ]
+  },
+  {
+    "objectID": "content/continuing_education.html#edit-and-add-your-pages",
+    "href": "content/continuing_education.html#edit-and-add-your-pages",
+    "title": "Customize",
+    "section": "",
+    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation).",
+    "crumbs": [
+      "Continuing Education"
+    ]
+  },
+  {
+    "objectID": "content/continuing_education.html#add-your-pages-the-project",
+    "href": "content/continuing_education.html#add-your-pages-the-project",
+    "title": "Continuing Education",
+    "section": "Add your pages the project",
+    "text": "Add your pages the project\n\nAdd the files to _quarto.yml",
+    "crumbs": [
+      "Continuing Education"
+    ]
+  },
+  {
+    "objectID": "content/continuing_education.html#information-technology",
+    "href": "content/continuing_education.html#information-technology",
+    "title": "Further Education",
+    "section": "➔ Information technology",
+    "text": "➔ Information technology\n\nCertificates\n\n\n2015\n\nCertificate in Geomatics and Regional Planning. University of Guadalajara. The Mexican Commission for the Knowledge and Use of Biodiversity, CONABIO.\n\n\n\n2012\n\nCertificate in Linux Administration. ITESO University\n\n\n\n2007\n\nCertificate in Design and Production of Multimedia & Interactive Systems. ITESO University\n\n\n\nWorkshops\n\n\n\n2022\n\nSearch & Retrieval of Statistic and Geographical Information: an update on new features and tools. UNAM - INEGI, México.\n\n\n\n2018\n\nOpen-source library services platform FOLIO. EBSCO Information Services & University of Guadalajara.\n\n\n\n2017\n\nThe Digital Map of Mexico platform. National System of Statistical and Geographical Information, INEGI. México.\n\n\n\n2016\n\nDrupal Camp. University of Guadalajara.\n\n\n\n2014\n\nOpen Access Journals. University of Guadalajara. Guadalajara, México.\n\n\n\n2013\n\nWeaving Academic E-learning Networks. ITESO University (International Workshop).\n\n\n\n2012\n\nDrupal Summit Latino. University of Guadalajara.\nIntellectual Property workshop. ITESO University.",
+    "crumbs": [
+      "Further Education"
+    ]
+  },
+  {
+    "objectID": "content/continuing_education.html#social-sciences",
+    "href": "content/continuing_education.html#social-sciences",
+    "title": "Further Education",
+    "section": "➔ Social Sciences",
+    "text": "➔ Social Sciences\n\nCertificates\n\n\n2024\n\nTransparency, Privacy and Security in Digital Environments. Institute of Transparency, Public Information and Protection of Personal Data of the State of Jalisco, ITEI.\n\n\n\n2010\n\nSocial controllership: Citizen's right to Accountability. ITESO University.\n\n\n\nSeminars & Workshops\n\n\n\n2024\n\nWebinar on Social Networks & Public Sector. Institute of Transparency, Public Information and Protection of Personal Data of the State of Jalisco (ITEI); Chihuahua Institute for Transparency and Access to Public Information (ICHITAIP).\n\n\n\n2022\n\nSeminar on Democracy, Governance & Civil Society. El Colegio de Jalisco. Guadalajara, México.\n\n\n\n2018\n\nXXII International Seminar on Communication & Society. “Fake News, Post-Truth and Journalism Studies”. University of Guadalajara. Guadalajara, México.\nSocial Research Projects: Strategies & Formulations. ITESO - IBERO Universities.\n\n\n\n2017\n\nXXI International Seminar on Communication & Society. “Youth and Digital Social Networks. Beliefs, results & perspectives in their research”. University of Guadalajara. Guadalajara, México.\n\n\n\n2016\n\nXX International Seminar on Communication & Society. “Between knowing & recognizing oneself. Contemporary cultures in a world of migrations”. University of Guadalajara. Guadalajara, México.\nSociety as Passion: Contributions to Systems Theory. ITESO - IBERO Universities.\n\n\n\n2015\n\nMeasurement of Public Policy results. El Colegio de Jalisco. Guadalajara, México.\nInnovation & Entrepreneurship Ecosystem. ITESO University.\n\n\n\n2014\n\nEconomic, Political & Environmental context analysis. ITESO University.\nWater, Governance & Political Ecology. ITESO University.\nComplex Thinking Paradigms. ITESO University.\nInternational Seminar on Communication & Society. “Communication at the Center: Theory, Opinion & the Academic Field”. ITESO University.\n\n\n\n2013\n\nGeneral overview of Ethics. ITESO & Deusto Universities.\nConflict resolution in México. ITESO University.\nThe Convergence between Cultural Policies & Communication Policies in the Digital era. ITESO University.\n\n\n\n2012\n\nCultural Studies & Citizenship Culture. ITESO University.\nCitizenship, Human Rights & Peace. ITESO University.\nCitizenship, Neighborhood & Fraternity. ITESO University.\n\n\n\n2011\n\nEthics in Education for Social Coexistence. ITESO University.\nSeminar of Knowledge & Culture. ITESO University.",
+    "crumbs": [
+      "Further Education"
+    ]
+  },
+  {
+    "objectID": "content/continuing_education.html#certificates-1",
+    "href": "content/continuing_education.html#certificates-1",
+    "title": "Continuing Education",
+    "section": "Certificates",
+    "text": "Certificates\n2024\n\nTransparency, Privacy and Security in Digital Environments. Institute of Transparency, Public Information and Protection of Personal Data of the State of Jalisco, ITEI.\n\n2010\n\nSocial controllership: Citizen's right to Accountability. ITESO University.",
+    "crumbs": [
+      "Continuing Education"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html",
+    "href": "content/project_gallery.html",
+    "title": "Project Gallery",
+    "section": "",
+    "text": "Image title",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#geomatics",
+    "href": "content/project_gallery.html#geomatics",
+    "title": "Project Gallery",
+    "section": "➔ Geomatics",
+    "text": "➔ Geomatics\n\nMistletoe-infested trees. Inventory within an urban polygon.\nESRI ArcGIS & ArcGIS StoryMaps\n\n\n\n\n“Guadalajara City Metropolitan Area”\n\n\n\n\n\n\n\n“Zapopan Downtown”\n\n\n\n\n\n\n\n\n“Urban Heritage Protection Area”\n\n\n\n\n\n\n\n“Study area Zoom in”\n\n\n\n\n\nAvailable at ArcGIS StoryMaps\nMore images on Behance Portfolio",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#geomatics-1",
+    "href": "content/project_gallery.html#geomatics-1",
+    "title": "Project Gallery",
+    "section": "➔ Geomatics",
+    "text": "➔ Geomatics",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#gui-customization",
+    "href": "content/project_gallery.html#gui-customization",
+    "title": "Project Gallery",
+    "section": "➔ GUI Customization",
+    "text": "➔ GUI Customization\n\n\n\n\n“Urban Heritage Protection Area”\n\n\n\n\n\n\n\n“Urban Heritage Protection Area”",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#gui-ux-design",
+    "href": "content/project_gallery.html#gui-ux-design",
+    "title": "Project Gallery",
+    "section": "➔ GUI & UX Design",
+    "text": "➔ GUI & UX Design\n\nITESO University Library’s Web portal\n\n\n\n\n“Home Page with IEEE Xplore publicity”\n\n\n\n\n\n\n\n“Home Page”\n\n\n\n\n\n\nUniversity Historic Photograph Collection\n\n\n\n\n“Home Page”\n\n\n\n\n\n\n\n“Home Page”",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#branding-gui-customization",
+    "href": "content/project_gallery.html#branding-gui-customization",
+    "title": "Project Gallery",
+    "section": "➔ Branding & GUI Customization",
+    "text": "➔ Branding & GUI Customization\n\nAcademic Repositories (DSpace)\n\n\n\n\n“Repository’s Front”\n\n\n\n\n\n\n\n“Repository’s Front”",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#design-customization",
+    "href": "content/project_gallery.html#design-customization",
+    "title": "Project Gallery",
+    "section": "Design & Customization",
+    "text": "Design & Customization\n\nOnline Public Access Catalog’s Discovery Search “ViFind”\n\n\n\n\n“OPAC’s discovery search Front”\n\n\n\n\n\n\n\n“OPAC’ discovery search Browse”",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#gui-design-of-dspace-repositories-help-modules",
+    "href": "content/project_gallery.html#gui-design-of-dspace-repositories-help-modules",
+    "title": "Project Gallery",
+    "section": "GUI Design of DSpace Repositories’ Help Modules",
+    "text": "GUI Design of DSpace Repositories’ Help Modules\n\nAcademic Repositories",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#dspace-acadcemic-repositories-help-modules",
+    "href": "content/project_gallery.html#dspace-acadcemic-repositories-help-modules",
+    "title": "Project Gallery",
+    "section": "DSpace Acadcemic Repositories’ Help Modules",
+    "text": "DSpace Acadcemic Repositories’ Help Modules\n\nAcademic Repositories",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#dspace-acadcemic-repositories",
+    "href": "content/project_gallery.html#dspace-acadcemic-repositories",
+    "title": "Project Gallery",
+    "section": "➔ DSpace Acadcemic Repositories",
+    "text": "➔ DSpace Acadcemic Repositories\n\nHelp Modules\n\n!“Repository’s Front”",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "index.html#optional-title",
+    "href": "index.html#optional-title",
+    "title": "Leobardo Oscar Alcántara Ocaña",
+    "section": "Optional Title",
+    "text": "Optional Title\nContent of the callout goes here. You can use Markdown formatting inside.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#personal-information",
+    "href": "index.html#personal-information",
+    "title": "Leobardo Oscar Alcántara Ocaña",
+    "section": "➔ Personal Information",
+    "text": "➔ Personal Information\n\nBorn: July 6th, 1972 / México City (CDMX, former D.F.).\nCitizenship: Mexican\n\n\n\n\n\n\n\nTipCONTACT\n\n\n\n\nleobardo@iteso.mx\nleobardooscar@gmail.com\n\n\n\n\n➔ Academic Degrees\n\n1996 B.A. in Communication Sciences - ITESO University, Guadalajara México.\n2012 M.A. in Communication of Science & Culture - ITESO University, Guadalajara México.\n\n\n\n\n➔ Work experience\n\n1999 – 2020 Web Designer & Web Content Manager. “Dr. Jorge Villalobos Padilla” Library. ITESO University. 97 – 2003 University’s Web Portal Content Manager. ITESO University.\n99 – 2001; 2011 Reference librarian. ITESO University.\n2007 – 2008 Reference librarian. “Cultural Centre Library”. Supreme Court of Justice of the Nation (SCJN), Mexico.\n\n\n\n➔ Skills & Capabilities\n\nTechnical ✒\n\nWeb content administration with Drupal & WordPress.\nDocumentation of projects and procedures.\nGUI customization (theming) of Repositories, Catalogs & Integrated Library Systems like Aleph, DSpace & Vufind.\nWork comfortably with Windows, Mac, or Linux.\n\n\n\nCommunication ✒\n\nFacilitate effective and meaningful communication, by mediating the request and response process between developers, staff, and end users of online information systems.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#dspace-acadecemic-repositories",
+    "href": "content/project_gallery.html#dspace-acadecemic-repositories",
+    "title": "Project Gallery",
+    "section": "➔ DSpace Acadecemic Repositories",
+    "text": "➔ DSpace Acadecemic Repositories\n\nHelp Modules\n\n!“Repository’s Front”",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#dspace-academic-repositories",
+    "href": "content/project_gallery.html#dspace-academic-repositories",
+    "title": "Project Gallery",
+    "section": "➔ DSpace Academic Repositories",
+    "text": "➔ DSpace Academic Repositories\n\nHelp Modules",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#dspace-help-modules",
+    "href": "content/project_gallery.html#dspace-help-modules",
+    "title": "Project Gallery",
+    "section": "➔ DSpace Help Modules",
+    "text": "➔ DSpace Help Modules",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/project_gallery.html#branding-design-customization",
+    "href": "content/project_gallery.html#branding-design-customization",
+    "title": "Project Gallery",
+    "section": "➔ Branding, Design & Customization",
+    "text": "➔ Branding, Design & Customization\n\nOnline Public Access Catalog’s Discovery Search “VuFind”\n\n\n\n\n“OPAC’s discovery search Front”\n\n\n\n\n\n\n\n“OPAC’ discovery search Browse”\n\n\n\n\n\n\nAcademic Repositories (DSpace)\n\n\n\n\n“Repository’s Front”\n\n\n\n\n\n\n\n“Repository’s Front”",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/about_me.html",
+    "href": "content/about_me.html",
+    "title": "About me",
+    "section": "",
+    "text": "Note\n\n\n\nThis repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland.",
+    "crumbs": [
+      "About me"
+    ]
+  }
+]

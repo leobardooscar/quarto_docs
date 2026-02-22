@@ -1,0 +1,111 @@
+---
+title: "Project Gallery"
+---
+
+---
+
+
+## ➔ GUI & UX Design
+
+### ITESO University Library’s Web portal
+<div style="float: left;">
+
+[!["Home Page with IEEE Xplore publicity"](../img/front_portal_biblioteca_IEEE.png "Snapshot available on web.archive.com "){width=435px}](https://web.archive.org/web/20190422142612/https://biblio.iteso.mx/)
+
+</div>
+
+
+<div style="float: right;">
+
+[!["Home Page"](../img/front_portal_biblioteca.png "Snapshot available on web.archive.com "){width=405px}](https://web.archive.org/web/20190422142612/https://biblio.iteso.mx/)
+
+</div>
+
+<br style="float: none; clear: both" />
+
+
+### University Historic Photograph Collection 
+
+
+<div style="float: left;">
+
+[!["Home Page"](../img/front_archivo_iteso_1.png "Not available online. Click on the image to see a larger version in the Adobe Portfolio. "){width=435px}](https://leobardooscar.myportfolio.com/university-historic-photograph-collection)
+</div>
+
+<div style="float: right;">
+[!["Home Page"](../img/front_archivo_iteso_2.png "Not available online. Click on the image to see a larger version in the Adobe Portfolio. "){width=435px}](https://leobardooscar.myportfolio.com/university-historic-photograph-collection)
+
+</div>
+
+<br style="float: none; clear: both" />
+
+## ➔ Branding, Design & Customization
+
+### Online Public Access Catalog's Discovery Search "VuFind"
+
+<div style="float: left;">
+[!["OPAC's discovery search Front"](../img/front_vufind.png "Watch it live!"){width=435px}](https://opac.biblio.iteso.mx/)
+
+</div>
+
+<div style="float: right;">
+[!["OPAC' discovery search Browse"](../img/browse_vufind.png "Watch it live!"){width=435px}](https://opac.biblio.iteso.mx/)
+</div>
+
+<br style="float: none; clear: both" />
+
+### Academic Repositories (DSpace)
+
+<div style="float: left;">
+[!["Repository's Front"](../img/front_rei.png "Watch it live!"){width=435px}](https://rei.iteso.mx/)
+</div>
+
+<div style="float: right;">
+[!["Repository's Front"](../img/front_ausjal.png "Watch it live!"){width=435px}](https://repositorio.ausjal.org/)
+
+</div>
+
+<br style="float: none; clear: both" />
+
+
+## ➔ Geomatics
+
+### Mistletoe-infested trees. Inventory within an urban polygon.
+ESRI ArcGIS & ArcGIS StoryMaps
+
+<div style="float: left;">
+
+[!["Guadalajara City Metropolitan Area"](../img/georeferenced_inventory_trees_A.png "Click to watch map live "){width=400px}](https://www.arcgis.com/apps/StorytellingSwipe/index.html?appid=e02b45f5efb74b10a24bc7ad9f962b7f)
+
+</div>
+
+
+<div style="float: right;">
+[!["Zapopan Downtown"](../img/georeferenced_inventory_trees_B.png "Click to watch map live "){width=400px}](https://www.arcgis.com/apps/StorytellingSwipe/index.html?appid=e02b45f5efb74b10a24bc7ad9f962b7f)
+</div>
+
+
+<br style="float: none; clear: both" />
+
+<div style="float: left;">
+
+[!["Urban Heritage Protection Area"](../img/georeferenced_inventory_trees_C.png "Click to watch map live "){width=400px}](https://www.arcgis.com/apps/StorytellingSwipe/index.html?appid=e02b45f5efb74b10a24bc7ad9f962b7f)
+
+</div>
+
+<div style="float: right;">
+[!["Study area Zoom in"](../img/georeferenced_inventory_trees_D.png "Click to watch map live "){width=400px}](https://www.arcgis.com/apps/StorytellingSwipe/index.html?appid=e02b45f5efb74b10a24bc7ad9f962b7f)
+
+
+</div>
+
+<br style="float: none; clear: both" />
+
+-  [**Available at ArcGIS StoryMaps**](https://www.arcgis.com/apps/StorytellingSwipe/index.html?appid=e02b45f5efb74b10a24bc7ad9f962b7f)
+
+- [**More images on Behance Portfolio**](https://leobardooscar.myportfolio.com/georerenced-inventory-of-urban-trees)
+
+
+<br style="float: none; clear: both" />
+
+
