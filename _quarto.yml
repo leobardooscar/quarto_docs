@@ -4,7 +4,7 @@ project:
 
 website: 
   page-navigation: true
-  title: "Leobardo Oscar Alcantara Ocaña" 
+  title: "Leobardo Oscar Alcántara Ocaña" 
   site-url: "https://nmfs-opensci.github.io/NOAA-quarto-simple" 
   repo-url: "https://github.com/nmfs-opensci/NOAA-quarto-simple"
   repo-actions: [edit, source, issue]
@@ -12,7 +12,7 @@ website:
   
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
-    left: "2026 &copy; CC-1.0 Leobardo Oscar Ocana"
+    left: "2026 &copy; CC-1.0 Leobardo Oscar Alcántara Ocaña"
   
   sidebar:
     background: "#D9E3E4"
@@ -40,8 +40,8 @@ website:
         text: Further Education
       - href: content/project_gallery.qmd
         text: Project Gallery
-      - href: content/about_me.qmd
-        text: About me
+      - href: content/hobbies.qmd
+        text: Hobbies
 format:
   html:
     theme:
