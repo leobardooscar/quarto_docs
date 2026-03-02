@@ -10,7 +10,9 @@ title: "Project Gallery"
 ### ITESO University Library’s Web portal
 <div style="float: left;">
 
-[!["Home Page with IEEE Xplore publicity"](../img/front_portal_biblioteca_IEEE.png "Snapshot available on web.archive.com "){width=435px}](https://web.archive.org/web/20190422142612/https://biblio.iteso.mx/)
+[!["Home Page with IEEE Xplore promotion"](../img/front_portal_biblioteca_IEEE.png "Snapshot available on web.archive.com "){width=435px}](https://web.archive.org/web/20190422142612/https://biblio.iteso.mx/)
+
+[Project image gallery](https://leobardooscar.github.io/portfolio/gui_ux.html "GUI & UX design works").
 
 </div>
 
@@ -19,12 +21,20 @@ title: "Project Gallery"
 
 [!["Home Page"](../img/front_portal_biblioteca.png "Snapshot available on web.archive.com "){width=405px}](https://web.archive.org/web/20190422142612/https://biblio.iteso.mx/)
 
+[Available on the Internet Archive](https://web.archive.org/web/20190422142612/https://biblio.iteso.mx/ "Front").
+
 </div>
+
+
+---
 
 <br style="float: none; clear: both" />
 
 
+---
+
 ### University Historic Photograph Collection 
+
 
 
 <div style="float: left;">
@@ -44,12 +54,15 @@ title: "Project Gallery"
 ### Online Public Access Catalog's Discovery Search "VuFind"
 
 <div style="float: left;">
-[!["OPAC's discovery search Front"](../img/front_vufind.png "Watch it live!"){width=435px}](https://opac.biblio.iteso.mx/)
+[!["OPAC's discovery search Front"](../img/front_vufind.png "Available on the Internet Archive"){width=445px}](https://web.archive.org/web/20210223235932/https://opac.biblio.iteso.mx/vufind/ "Front page")
 
+[Available on the Internet Archive](https://web.archive.org/web/20190422142612/https://biblio.iteso.mx/ "Front").
 </div>
 
 <div style="float: right;">
-[!["OPAC' discovery search Browse"](../img/browse_vufind.png "Watch it live!"){width=435px}](https://opac.biblio.iteso.mx/)
+[!["OPAC' discovery search Browse"](../img/browse_vufind.png "Available on the Internet Archive"){width=435px}](https://leobardooscar.myportfolio.com/online-public-access-catalog-discovery-interface "Browse")
+
+[More images on Adobe Portfolio](https://leobardooscar.myportfolio.com/online-public-access-catalog-discovery-interface "Browse").
 </div>
 
 <br style="float: none; clear: both" />
