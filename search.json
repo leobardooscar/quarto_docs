@@ -90,10 +90,7 @@
     "href": "content/about_me.html",
     "title": "About me",
     "section": "",
-    "text": "Note\n\n\n\nThis repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland.",
-    "crumbs": [
-      "About me"
-    ]
+    "text": "Note\n\n\n\nThis repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland."
   },
   {
     "objectID": "index.html#personal-information",
@@ -202,48 +199,69 @@
     "href": "content/hobbies.html",
     "title": "Hobbies",
     "section": "",
-    "text": "Usr. profile on MUBI: 1,340 Ratings & Reviews, so far.\n\nMy favorite movies:\n+ Les Quatro Cents Coupes.  François Truffaut (1959).\n\n+ Blade Runner. Ridley Scott (1982).\n\n\n\n\n\n\n\nEn décembre 1999, MK2 Productions absorbe Les Films du Carrosse.\nThe Ladd Company released Blade Runner in 1982.\n\n\n\n\n\n\n\n\n\n\nA must-read reference in the world of film criticism:\n\n300 movies that Rober Ebert -website- consider worthy of beign called “great”.\nRoger Ebert was a film critic for the Chicago Sun-Times from 1967 until his death in 2013."
+    "text": "Usr. profile on MUBI: 1,340 Ratings & Reviews, so far.\n\nMy favorite movies:\n+ Les Quatro Cents Coupes.  François Truffaut (1959).\n\n+ Blade Runner. Ridley Scott (1982).\n\n\n\n\n\n\n\nEn décembre 1999, MK2 Productions absorbe Les Films du Carrosse.\nThe Ladd Company released Blade Runner in 1982.\n\n\n\n\n\n\n\n\n\n\nA must-read reference in the world of film criticism:\n\n300 movies that Rober Ebert -website- consider worthy of beign called “great”.\nRoger Ebert was a film critic for the Chicago Sun-Times from 1967 until his death in 2013.",
+    "crumbs": [
+      "Hobbies"
+    ]
   },
   {
     "objectID": "content/hobbies.html#cinema",
     "href": "content/hobbies.html#cinema",
     "title": "Hobbies",
     "section": "",
-    "text": "Usr. profile on MUBI: 1,340 Ratings & Reviews, so far.\n\nMy favorite movies:\n+ Les Quatro Cents Coupes.  François Truffaut (1959).\n\n+ Blade Runner. Ridley Scott (1982).\n\n\n\n\n\n\n\nEn décembre 1999, MK2 Productions absorbe Les Films du Carrosse.\nThe Ladd Company released Blade Runner in 1982.\n\n\n\n\n\n\n\n\n\n\nA must-read reference in the world of film criticism:\n\n300 movies that Rober Ebert -website- consider worthy of beign called “great”.\nRoger Ebert was a film critic for the Chicago Sun-Times from 1967 until his death in 2013."
+    "text": "Usr. profile on MUBI: 1,340 Ratings & Reviews, so far.\n\nMy favorite movies:\n+ Les Quatro Cents Coupes.  François Truffaut (1959).\n\n+ Blade Runner. Ridley Scott (1982).\n\n\n\n\n\n\n\nEn décembre 1999, MK2 Productions absorbe Les Films du Carrosse.\nThe Ladd Company released Blade Runner in 1982.\n\n\n\n\n\n\n\n\n\n\nA must-read reference in the world of film criticism:\n\n300 movies that Rober Ebert -website- consider worthy of beign called “great”.\nRoger Ebert was a film critic for the Chicago Sun-Times from 1967 until his death in 2013.",
+    "crumbs": [
+      "Hobbies"
+    ]
   },
   {
     "objectID": "content/hobbies.html#lexicography",
     "href": "content/hobbies.html#lexicography",
     "title": "Hobbies",
     "section": "➔ Lexicography",
-    "text": "➔ Lexicography\nEnglish Spanish Dictionary\n\nDescription:\n\nThis is not intended to be a professional dictionary by any means. This is just a collection of English vocabulary used in news, debates and opinion shows. The goal is to learn the intricacies of building an online dictionary. I’m just an enthuisiast of lexicography. Work in progress :-)\n\nLink: ❛ Lexonomy English - Spanish Dictionary ❜]\nTools I recommend:\n\nSkell - Sketch Engine for language learning\nWord Hippo"
+    "text": "➔ Lexicography\nEnglish Spanish Dictionary\n\nDescription:\n\nThis is not intended to be a professional dictionary by any means. This is just a collection of English vocabulary used in news, debates and opinion shows. The goal is to learn the intricacies of building an online dictionary. I’m just an enthuisiast of lexicography. Work in progress :-)\n\nLink: ❛ Lexonomy English - Spanish Dictionary ❜]\nTools I recommend:\n\nSkell - Sketch Engine for language learning\nWord Hippo",
+    "crumbs": [
+      "Hobbies"
+    ]
   },
   {
     "objectID": "content/hobbies.html#nephologist",
     "href": "content/hobbies.html#nephologist",
     "title": "Hobbies",
     "section": "➔ Nephologist",
-    "text": "➔ Nephologist\n\nCloud observation & appreciation:\n\nClouds spotted in Guadalajara Jalisco Mexico: FRONT\nClouds spotted in Guadalajara Jalisco Mexico: Collection Builder"
+    "text": "➔ Nephologist\n\nCloud observation & appreciation:\n\nClouds spotted in Guadalajara Jalisco Mexico: FRONT\nClouds spotted in Guadalajara Jalisco Mexico: Collection Builder",
+    "crumbs": [
+      "Hobbies"
+    ]
   },
   {
     "objectID": "content/hobbies.html#photography",
     "href": "content/hobbies.html#photography",
     "title": "Hobbies",
     "section": "➔ Photography",
-    "text": "➔ Photography\n\nFlicker image showcase\nInstagram"
+    "text": "➔ Photography\n\nFlicker image showcase\nInstagram",
+    "crumbs": [
+      "Hobbies"
+    ]
   },
   {
     "objectID": "content/hobbies.html#music",
     "href": "content/hobbies.html#music",
     "title": "Hobbies",
     "section": "➔ Music",
-    "text": "➔ Music\n\nMy Playlist on Spotify"
+    "text": "➔ Music\n\nMy Playlist on Spotify",
+    "crumbs": [
+      "Hobbies"
+    ]
   },
   {
     "objectID": "content/hobbies.html#dogs",
     "href": "content/hobbies.html#dogs",
     "title": "Hobbies",
     "section": "➔ Dogs",
-    "text": "➔ Dogs\nI'm a dog person\n\n   .-------------.       .    .   *       *   \n  /_/_/_/_/_/_/_/ \\         *       .   )    .\n //_/_/_/_/_/_// _ \\ __          .        .   \n/_/_/_/_/_/_/_/|/ \\.' .`-o                    \n |             ||-'(/ ,--'                    \n |             ||  _ |                        \n |             ||'' ||                        \n |_____________|| |_|L                     hjm\n\nJazz (2014-2023)\n\nKirby (2023-)\n\nFeral dogs rescued."
+    "text": "➔ Dogs\nI'm a dog person\n\n   .-------------.       .    .   *       *   \n  /_/_/_/_/_/_/_/ \\         *       .   )    .\n //_/_/_/_/_/_// _ \\ __          .        .   \n/_/_/_/_/_/_/_/|/ \\.' .`-o                    \n |             ||-'(/ ,--'                    \n |             ||  _ |                        \n |             ||'' ||                        \n |_____________|| |_|L                     hjm\n\nJazz (2014-2023)\n\nKirby (2023-)\n\nFeral dogs rescued.",
+    "crumbs": [
+      "Hobbies"
+    ]
   }
 ]
