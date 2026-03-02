@@ -1,44 +1,89 @@
 [
   {
-    "objectID": "content/rmarkdown.html",
-    "href": "content/rmarkdown.html",
-    "title": "R Markdown",
+    "objectID": "content/publishing.html",
+    "href": "content/publishing.html",
+    "title": "Publishing",
     "section": "",
-    "text": "You can include R Markdown files in your project."
+    "text": "To get your Quarto webpage to show up with the url\nyou have a few steps."
   },
   {
-    "objectID": "content/rmarkdown.html#r-markdown",
-    "href": "content/rmarkdown.html#r-markdown",
-    "title": "R Markdown",
-    "section": "R Markdown",
-    "text": "R Markdown\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00"
+    "objectID": "content/publishing.html#turn-on-github-pages-for-your-repo",
+    "href": "content/publishing.html#turn-on-github-pages-for-your-repo",
+    "title": "Publishing",
+    "section": "Turn on GitHub Pages for your repo",
+    "text": "Turn on GitHub Pages for your repo\n\nTurn on GitHub Pages under Settings &gt; Pages . You will set pages to be made from the gh-pages branch and the root directory.\nTurn on GitHub Actions under Settings &gt; Actions &gt; General\n\nThe GitHub Action will automatically recreate your website when you push to GitHub after you do the initial gh-pages set-up"
   },
   {
-    "objectID": "content/rmarkdown.html#including-plots",
-    "href": "content/rmarkdown.html#including-plots",
-    "title": "R Markdown",
-    "section": "Including Plots",
-    "text": "Including Plots\nYou can also embed plots, for example:\n\n\n\n\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot."
+    "objectID": "content/publishing.html#do-your-first-publish-to-gh-pages",
+    "href": "content/publishing.html#do-your-first-publish-to-gh-pages",
+    "title": "Publishing",
+    "section": "Do your first publish to gh-pages",
+    "text": "Do your first publish to gh-pages\nThe first time you publish to gh-pages, you need to do so locally.\n\nOn your local computer, open a terminal window and cd to your repo directory. Here is what that cd command looks like for me. You command will look different because your local repo will be somewhere else on your computer.\n\ncd ~/Documents/GitHub/NOAA-quarto-simple\n\nPublish to the gh-pages. In the terminal type\n\nquarto publish gh-pages\nThis is going to render your webpage and then push the _site contents to the gh-pages branch."
   },
   {
-    "objectID": "content/continuing_education.html#information-technology",
-    "href": "content/continuing_education.html#information-technology",
-    "title": "Further Education",
-    "section": "➔ Information technology",
-    "text": "➔ Information technology\n\nCertificates\n\n\n2015\n\nCertificate in Geomatics and Regional Planning. University of Guadalajara. The Mexican Commission for the Knowledge and Use of Biodiversity, CONABIO.\n\n\n\n2012\n\nCertificate in Linux Administration. ITESO University\n\n\n\n2007\n\nCertificate in Design and Production of Multimedia & Interactive Systems. ITESO University\n\n\n\nWorkshops\n\n\n\n2022\n\nSearch & Retrieval of Statistic and Geographical Information: an update on new features and tools. UNAM - INEGI, México.\n\n\n\n2018\n\nOpen-source library services platform FOLIO. EBSCO Information Services & University of Guadalajara.\n\n\n\n2017\n\nThe Digital Map of Mexico platform. National System of Statistical and Geographical Information, INEGI. México.\n\n\n\n2016\n\nDrupal Camp. University of Guadalajara.\n\n\n\n2014\n\nOpen Access Journals. University of Guadalajara. Guadalajara, México.\n\n\n\n2013\n\nWeaving Academic E-learning Networks. ITESO University (International Workshop).\n\n\n\n2012\n\nDrupal Summit Latino. University of Guadalajara.\nIntellectual Property workshop. ITESO University.",
+    "objectID": "content/publishing.html#dont-like-using-gh-pages",
+    "href": "content/publishing.html#dont-like-using-gh-pages",
+    "title": "Publishing",
+    "section": "Don’t like using gh-pages?",
+    "text": "Don’t like using gh-pages?\nIn some cases, you don’t want your website on the gh-pages branch. For example, if you are creating releases and you want the website pages archived in that release, then you won’t want your website pages on the gh-pages branch.\nHere are the changes you need to make if you to avoid gh-pages branch.\n\nAt the top of _quarto.yml add the following:\n\nproject: \n  type: website\n  output-dir: docs\n\nOn GitHub under Settings &gt; Pages set pages to be made from the main branch and the docs directory.\nMake sure docs is not listed in .gitignore\nPublish the site the first time locally using quarto publish from the terminal\nChange the GitHub Action because you can’t use quarto publish gh-pages. You’ll need to push to the main branch yourself (in the GitHub Action)\n\non:\n  push:\n    branches: main\n\nname: Render and Publish\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    env:\n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}\n\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v2 \n        \n      - name: Set up R (needed for Rmd)\n        uses: r-lib/actions/setup-r@v2\n\n      - name: Install packages (needed for Rmd)\n        run: Rscript -e 'install.packages(c(\"rmarkdown\", \"knitr\", \"jsonlite\"))'\n\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n        with:\n          # To install LaTeX to build PDF book \n          # tinytex: true \n          # uncomment below and fill to pin a version\n          # version: 0.9.600\n      \n      - name: Render Quarto Project\n        uses: quarto-dev/quarto-actions/render@v2\n        with:\n          to: html\n\n      - name: Set up Git\n        run: |\n          git config --local user.email \"actions@github.com\"\n          git config --local user.name \"GitHub Actions\"\n\n      - name: Commit all changes and push\n        run: |\n          git add -A && git commit -m 'Build site' || echo \"No changes to commit\"\n          git push origin || echo \"No changes to commit\""
+  },
+  {
+    "objectID": "content/project_gallery.html#gui-ux-design",
+    "href": "content/project_gallery.html#gui-ux-design",
+    "title": "Project Gallery",
+    "section": "➔ GUI & UX Design",
+    "text": "➔ GUI & UX Design\n\nITESO University Library’s Web portal\n\n\n\n\n“Home Page with IEEE Xplore promotion”\n\n\nProject image gallery.\n\n\n\n\n\n“Home Page”\n\n\nAvailable on the Internet Archive.\n\n\n\n\n\n\nUniversity Historic Photograph Collection\n\n\n\n\n“Home Page”\n\n\n\n\n\n\n\n“Home Page”",
     "crumbs": [
-      "Further Education"
+      "Project Gallery"
     ]
   },
   {
-    "objectID": "content/continuing_education.html#social-sciences",
-    "href": "content/continuing_education.html#social-sciences",
-    "title": "Further Education",
-    "section": "➔ Social Sciences",
-    "text": "➔ Social Sciences\n\nCertificates\n\n\n2024\n\nTransparency, Privacy and Security in Digital Environments. Institute of Transparency, Public Information and Protection of Personal Data of the State of Jalisco, ITEI.\n\n\n\n2010\n\nSocial controllership: Citizen's right to Accountability. ITESO University.\n\n\n\nSeminars & Workshops\n\n\n\n2024\n\nWebinar on Social Networks & Public Sector. Institute of Transparency, Public Information and Protection of Personal Data of the State of Jalisco (ITEI); Chihuahua Institute for Transparency and Access to Public Information (ICHITAIP).\n\n\n\n2022\n\nSeminar on Democracy, Governance & Civil Society. El Colegio de Jalisco. Guadalajara, México.\n\n\n\n2018\n\nXXII International Seminar on Communication & Society. “Fake News, Post-Truth and Journalism Studies”. University of Guadalajara. Guadalajara, México.\nSocial Research Projects: Strategies & Formulations. ITESO - IBERO Universities.\n\n\n\n2017\n\nXXI International Seminar on Communication & Society. “Youth and Digital Social Networks. Beliefs, results & perspectives in their research”. University of Guadalajara. Guadalajara, México.\n\n\n\n2016\n\nXX International Seminar on Communication & Society. “Between knowing & recognizing oneself. Contemporary cultures in a world of migrations”. University of Guadalajara. Guadalajara, México.\nSociety as Passion: Contributions to Systems Theory. ITESO - IBERO Universities.\n\n\n\n2015\n\nMeasurement of Public Policy results. El Colegio de Jalisco. Guadalajara, México.\nInnovation & Entrepreneurship Ecosystem. ITESO University.\n\n\n\n2014\n\nEconomic, Political & Environmental context analysis. ITESO University.\nWater, Governance & Political Ecology. ITESO University.\nComplex Thinking Paradigms. ITESO University.\nInternational Seminar on Communication & Society. “Communication at the Center: Theory, Opinion & the Academic Field”. ITESO University.\n\n\n\n2013\n\nGeneral overview of Ethics. ITESO & Deusto Universities.\nConflict resolution in México. ITESO University.\nThe Convergence between Cultural Policies & Communication Policies in the Digital era. ITESO University.\n\n\n\n2012\n\nCultural Studies & Citizenship Culture. ITESO University.\nCitizenship, Human Rights & Peace. ITESO University.\nCitizenship, Neighborhood & Fraternity. ITESO University.\n\n\n\n2011\n\nEthics in Education for Social Coexistence. ITESO University.\nSeminar of Knowledge & Culture. ITESO University.",
+    "objectID": "content/project_gallery.html#branding-design-customization",
+    "href": "content/project_gallery.html#branding-design-customization",
+    "title": "Project Gallery",
+    "section": "➔ Branding, Design & Customization",
+    "text": "➔ Branding, Design & Customization\n\nOnline Public Access Catalog’s Discovery Search “VuFind”\n\n\n\n\n“OPAC’s discovery search Front”\n\n\nAvailable on the Internet Archive.\n\n\n\n\n\n“OPAC’ discovery search Browse”\n\n\nMore images on Adobe Portfolio.\n\n\n\n\nAcademic Repositories (DSpace)\n\n\n\n\n“Repository’s Front”\n\n\n\n\n\n\n\n“Repository’s Front”",
     "crumbs": [
-      "Further Education"
+      "Project Gallery"
     ]
+  },
+  {
+    "objectID": "content/project_gallery.html#geomatics",
+    "href": "content/project_gallery.html#geomatics",
+    "title": "Project Gallery",
+    "section": "➔ Geomatics",
+    "text": "➔ Geomatics\n\nMistletoe-infested trees. Inventory within an urban polygon.\nESRI ArcGIS & ArcGIS StoryMaps\n\n\n\n\n“Guadalajara City Metropolitan Area”\n\n\n\n\n\n\n\n“Zapopan Downtown”\n\n\n\n\n\n\n\n\n“Urban Heritage Protection Area”\n\n\n\n\n\n\n\n“Study area Zoom in”\n\n\n\n\n\nAvailable at ArcGIS StoryMaps\nMore images on Behance Portfolio",
+    "crumbs": [
+      "Project Gallery"
+    ]
+  },
+  {
+    "objectID": "content/rendering.html",
+    "href": "content/rendering.html",
+    "title": "Rendering",
+    "section": "",
+    "text": "The repo includes a GitHub Action that will render (build) the website automatically when you make changes to the files. It will be pushed to the gh-pages branch.\nBut when you are developing your content, you will want to render it locally."
+  },
+  {
+    "objectID": "content/rendering.html#step-1.-make-sure-you-have-a-recent-rstudio",
+    "href": "content/rendering.html#step-1.-make-sure-you-have-a-recent-rstudio",
+    "title": "Rendering",
+    "section": "Step 1. Make sure you have a recent RStudio",
+    "text": "Step 1. Make sure you have a recent RStudio\nHave you updated RStudio since about August 2022? No? Then update to a newer version of RStudio. In general, you want to keep RStudio updated and it is required to have a recent version to use Quarto."
+  },
+  {
+    "objectID": "content/rendering.html#step-2.-clone-and-create-rstudio-project",
+    "href": "content/rendering.html#step-2.-clone-and-create-rstudio-project",
+    "title": "Rendering",
+    "section": "Step 2. Clone and create RStudio project",
+    "text": "Step 2. Clone and create RStudio project\nFirst, clone the repo onto your local computer. How? You can click File &gt; New Project and then select “Version Control”. Paste in the url of the repository. That will clone the repo on to your local computer. When you make changes, you will need to push those up."
+  },
+  {
+    "objectID": "content/rendering.html#step-3.-render-within-rstudio",
+    "href": "content/rendering.html#step-3.-render-within-rstudio",
+    "title": "Rendering",
+    "section": "Step 3. Render within RStudio",
+    "text": "Step 3. Render within RStudio\nRStudio will recognize that this is a Quarto project by the presence of the _quarto.yml file and will see the “Build” tab. Click the “Render website” button to render to the _site folder.\nPreviewing: You can either click index.html in the _site folder and specify “preview in browser” or set up RStudio to preview to the viewer panel. To do the latter, go to Tools &gt; Global Options &gt; R Markdown. Then select “Show output preview in: Viewer panel”."
   },
   {
     "objectID": "content/about_me.html",
@@ -49,27 +94,6 @@
     "crumbs": [
       "About me"
     ]
-  },
-  {
-    "objectID": "content/code.html",
-    "href": "content/code.html",
-    "title": "Rendering with Code",
-    "section": "",
-    "text": "You can have code (R, Python or Julia) in your qmd file. You will need to have these installed on your local computer, but presumably you do already if you are adding code to your qmd files.\nx &lt;- c(5, 15, 25, 35, 45, 55)\ny &lt;- c(5, 20, 14, 32, 22, 38)\nlm(x ~ y)\n\n\nCall:\nlm(formula = x ~ y)\n\nCoefficients:\n(Intercept)            y  \n      1.056        1.326"
-  },
-  {
-    "objectID": "content/code.html#modify-the-github-action",
-    "href": "content/code.html#modify-the-github-action",
-    "title": "Rendering with Code",
-    "section": "Modify the GitHub Action",
-    "text": "Modify the GitHub Action\nYou will need to change the GitHub Action in .github/workflows to install these and any needed packages in order for GitHub to be able to render your webpage. The GitHub Action install R since I used that in code.qmd. If you use Python or Julia instead, then you will need to update the GitHub Action to install those.\nIf getting the GitHub Action to work is too much hassle (and that definitely happens), you can alway render locally and publish to the gh-pages branch. If you do this, make sure to delete or rename the GitHub Action to something like\nrender-and-publish.old_yml\nso GitHub does not keep trying to run it. Nothing bad will happen if you don’t do this, but if you are not using the action (because it keeps failing), then you don’t need GitHub to run it."
-  },
-  {
-    "objectID": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
-    "href": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
-    "title": "Rendering with Code",
-    "section": "Render locally and publish to gh-pages branch",
-    "text": "Render locally and publish to gh-pages branch\nTo render locally and push up to the gh-pages branch, open a terminal window and then cd to the directory with the Quarto project. Type this in the terminal:\nquarto render gh-pages"
   },
   {
     "objectID": "index.html#personal-information",
@@ -112,89 +136,114 @@
     ]
   },
   {
-    "objectID": "content/rendering.html",
-    "href": "content/rendering.html",
-    "title": "Rendering",
+    "objectID": "content/rmarkdown.html",
+    "href": "content/rmarkdown.html",
+    "title": "R Markdown",
     "section": "",
-    "text": "The repo includes a GitHub Action that will render (build) the website automatically when you make changes to the files. It will be pushed to the gh-pages branch.\nBut when you are developing your content, you will want to render it locally."
+    "text": "You can include R Markdown files in your project."
   },
   {
-    "objectID": "content/rendering.html#step-1.-make-sure-you-have-a-recent-rstudio",
-    "href": "content/rendering.html#step-1.-make-sure-you-have-a-recent-rstudio",
-    "title": "Rendering",
-    "section": "Step 1. Make sure you have a recent RStudio",
-    "text": "Step 1. Make sure you have a recent RStudio\nHave you updated RStudio since about August 2022? No? Then update to a newer version of RStudio. In general, you want to keep RStudio updated and it is required to have a recent version to use Quarto."
+    "objectID": "content/rmarkdown.html#r-markdown",
+    "href": "content/rmarkdown.html#r-markdown",
+    "title": "R Markdown",
+    "section": "R Markdown",
+    "text": "R Markdown\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00"
   },
   {
-    "objectID": "content/rendering.html#step-2.-clone-and-create-rstudio-project",
-    "href": "content/rendering.html#step-2.-clone-and-create-rstudio-project",
-    "title": "Rendering",
-    "section": "Step 2. Clone and create RStudio project",
-    "text": "Step 2. Clone and create RStudio project\nFirst, clone the repo onto your local computer. How? You can click File &gt; New Project and then select “Version Control”. Paste in the url of the repository. That will clone the repo on to your local computer. When you make changes, you will need to push those up."
+    "objectID": "content/rmarkdown.html#including-plots",
+    "href": "content/rmarkdown.html#including-plots",
+    "title": "R Markdown",
+    "section": "Including Plots",
+    "text": "Including Plots\nYou can also embed plots, for example:\n\n\n\n\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot."
   },
   {
-    "objectID": "content/rendering.html#step-3.-render-within-rstudio",
-    "href": "content/rendering.html#step-3.-render-within-rstudio",
-    "title": "Rendering",
-    "section": "Step 3. Render within RStudio",
-    "text": "Step 3. Render within RStudio\nRStudio will recognize that this is a Quarto project by the presence of the _quarto.yml file and will see the “Build” tab. Click the “Render website” button to render to the _site folder.\nPreviewing: You can either click index.html in the _site folder and specify “preview in browser” or set up RStudio to preview to the viewer panel. To do the latter, go to Tools &gt; Global Options &gt; R Markdown. Then select “Show output preview in: Viewer panel”."
-  },
-  {
-    "objectID": "content/project_gallery.html#gui-ux-design",
-    "href": "content/project_gallery.html#gui-ux-design",
-    "title": "Project Gallery",
-    "section": "➔ GUI & UX Design",
-    "text": "➔ GUI & UX Design\n\nITESO University Library’s Web portal\n\n\n\n\n“Home Page with IEEE Xplore publicity”\n\n\n\n\n\n\n\n“Home Page”\n\n\n\n\n\n\nUniversity Historic Photograph Collection\n\n\n\n\n“Home Page”\n\n\n\n\n\n\n\n“Home Page”",
+    "objectID": "content/continuing_education.html#information-technology",
+    "href": "content/continuing_education.html#information-technology",
+    "title": "Further Education",
+    "section": "➔ Information technology",
+    "text": "➔ Information technology\n\nCertificates\n\n\n2015\n\nCertificate in Geomatics and Regional Planning. University of Guadalajara. The Mexican Commission for the Knowledge and Use of Biodiversity, CONABIO.\n\n\n\n2012\n\nCertificate in Linux Administration. ITESO University\n\n\n\n2007\n\nCertificate in Design and Production of Multimedia & Interactive Systems. ITESO University\n\n\n\nWorkshops\n\n\n\n2022\n\nSearch & Retrieval of Statistic and Geographical Information: an update on new features and tools. UNAM - INEGI, México.\n\n\n\n2018\n\nOpen-source library services platform FOLIO. EBSCO Information Services & University of Guadalajara.\n\n\n\n2017\n\nThe Digital Map of Mexico platform. National System of Statistical and Geographical Information, INEGI. México.\n\n\n\n2016\n\nDrupal Camp. University of Guadalajara.\n\n\n\n2014\n\nOpen Access Journals. University of Guadalajara. Guadalajara, México.\n\n\n\n2013\n\nWeaving Academic E-learning Networks. ITESO University (International Workshop).\n\n\n\n2012\n\nDrupal Summit Latino. University of Guadalajara.\nIntellectual Property workshop. ITESO University.",
     "crumbs": [
-      "Project Gallery"
+      "Further Education"
     ]
   },
   {
-    "objectID": "content/project_gallery.html#branding-design-customization",
-    "href": "content/project_gallery.html#branding-design-customization",
-    "title": "Project Gallery",
-    "section": "➔ Branding, Design & Customization",
-    "text": "➔ Branding, Design & Customization\n\nOnline Public Access Catalog’s Discovery Search “VuFind”\n\n\n\n\n“OPAC’s discovery search Front”\n\n\n\n\n\n\n\n“OPAC’ discovery search Browse”\n\n\n\n\n\n\nAcademic Repositories (DSpace)\n\n\n\n\n“Repository’s Front”\n\n\n\n\n\n\n\n“Repository’s Front”",
+    "objectID": "content/continuing_education.html#social-sciences",
+    "href": "content/continuing_education.html#social-sciences",
+    "title": "Further Education",
+    "section": "➔ Social Sciences",
+    "text": "➔ Social Sciences\n\nCertificates\n\n\n2024\n\nTransparency, Privacy and Security in Digital Environments. Institute of Transparency, Public Information and Protection of Personal Data of the State of Jalisco, ITEI.\n\n\n\n2010\n\nSocial controllership: Citizen's right to Accountability. ITESO University.\n\n\n\nSeminars & Workshops\n\n\n\n2024\n\nWebinar on Social Networks & Public Sector. Institute of Transparency, Public Information and Protection of Personal Data of the State of Jalisco (ITEI); Chihuahua Institute for Transparency and Access to Public Information (ICHITAIP).\n\n\n\n2022\n\nSeminar on Democracy, Governance & Civil Society. El Colegio de Jalisco. Guadalajara, México.\n\n\n\n2018\n\nXXII International Seminar on Communication & Society. “Fake News, Post-Truth and Journalism Studies”. University of Guadalajara. Guadalajara, México.\nSocial Research Projects: Strategies & Formulations. ITESO - IBERO Universities.\n\n\n\n2017\n\nXXI International Seminar on Communication & Society. “Youth and Digital Social Networks. Beliefs, results & perspectives in their research”. University of Guadalajara. Guadalajara, México.\n\n\n\n2016\n\nXX International Seminar on Communication & Society. “Between knowing & recognizing oneself. Contemporary cultures in a world of migrations”. University of Guadalajara. Guadalajara, México.\nSociety as Passion: Contributions to Systems Theory. ITESO - IBERO Universities.\n\n\n\n2015\n\nMeasurement of Public Policy results. El Colegio de Jalisco. Guadalajara, México.\nInnovation & Entrepreneurship Ecosystem. ITESO University.\n\n\n\n2014\n\nEconomic, Political & Environmental context analysis. ITESO University.\nWater, Governance & Political Ecology. ITESO University.\nComplex Thinking Paradigms. ITESO University.\nInternational Seminar on Communication & Society. “Communication at the Center: Theory, Opinion & the Academic Field”. ITESO University.\n\n\n\n2013\n\nGeneral overview of Ethics. ITESO & Deusto Universities.\nConflict resolution in México. ITESO University.\nThe Convergence between Cultural Policies & Communication Policies in the Digital era. ITESO University.\n\n\n\n2012\n\nCultural Studies & Citizenship Culture. ITESO University.\nCitizenship, Human Rights & Peace. ITESO University.\nCitizenship, Neighborhood & Fraternity. ITESO University.\n\n\n\n2011\n\nEthics in Education for Social Coexistence. ITESO University.\nSeminar of Knowledge & Culture. ITESO University.",
     "crumbs": [
-      "Project Gallery"
+      "Further Education"
     ]
   },
   {
-    "objectID": "content/project_gallery.html#geomatics",
-    "href": "content/project_gallery.html#geomatics",
-    "title": "Project Gallery",
-    "section": "➔ Geomatics",
-    "text": "➔ Geomatics\n\nMistletoe-infested trees. Inventory within an urban polygon.\nESRI ArcGIS & ArcGIS StoryMaps\n\n\n\n\n“Guadalajara City Metropolitan Area”\n\n\n\n\n\n\n\n“Zapopan Downtown”\n\n\n\n\n\n\n\n\n“Urban Heritage Protection Area”\n\n\n\n\n\n\n\n“Study area Zoom in”\n\n\n\n\n\nAvailable at ArcGIS StoryMaps\nMore images on Behance Portfolio",
-    "crumbs": [
-      "Project Gallery"
-    ]
-  },
-  {
-    "objectID": "content/publishing.html",
-    "href": "content/publishing.html",
-    "title": "Publishing",
+    "objectID": "content/code.html",
+    "href": "content/code.html",
+    "title": "Rendering with Code",
     "section": "",
-    "text": "To get your Quarto webpage to show up with the url\nyou have a few steps."
+    "text": "You can have code (R, Python or Julia) in your qmd file. You will need to have these installed on your local computer, but presumably you do already if you are adding code to your qmd files.\nx &lt;- c(5, 15, 25, 35, 45, 55)\ny &lt;- c(5, 20, 14, 32, 22, 38)\nlm(x ~ y)\n\n\nCall:\nlm(formula = x ~ y)\n\nCoefficients:\n(Intercept)            y  \n      1.056        1.326"
   },
   {
-    "objectID": "content/publishing.html#turn-on-github-pages-for-your-repo",
-    "href": "content/publishing.html#turn-on-github-pages-for-your-repo",
-    "title": "Publishing",
-    "section": "Turn on GitHub Pages for your repo",
-    "text": "Turn on GitHub Pages for your repo\n\nTurn on GitHub Pages under Settings &gt; Pages . You will set pages to be made from the gh-pages branch and the root directory.\nTurn on GitHub Actions under Settings &gt; Actions &gt; General\n\nThe GitHub Action will automatically recreate your website when you push to GitHub after you do the initial gh-pages set-up"
+    "objectID": "content/code.html#modify-the-github-action",
+    "href": "content/code.html#modify-the-github-action",
+    "title": "Rendering with Code",
+    "section": "Modify the GitHub Action",
+    "text": "Modify the GitHub Action\nYou will need to change the GitHub Action in .github/workflows to install these and any needed packages in order for GitHub to be able to render your webpage. The GitHub Action install R since I used that in code.qmd. If you use Python or Julia instead, then you will need to update the GitHub Action to install those.\nIf getting the GitHub Action to work is too much hassle (and that definitely happens), you can alway render locally and publish to the gh-pages branch. If you do this, make sure to delete or rename the GitHub Action to something like\nrender-and-publish.old_yml\nso GitHub does not keep trying to run it. Nothing bad will happen if you don’t do this, but if you are not using the action (because it keeps failing), then you don’t need GitHub to run it."
   },
   {
-    "objectID": "content/publishing.html#do-your-first-publish-to-gh-pages",
-    "href": "content/publishing.html#do-your-first-publish-to-gh-pages",
-    "title": "Publishing",
-    "section": "Do your first publish to gh-pages",
-    "text": "Do your first publish to gh-pages\nThe first time you publish to gh-pages, you need to do so locally.\n\nOn your local computer, open a terminal window and cd to your repo directory. Here is what that cd command looks like for me. You command will look different because your local repo will be somewhere else on your computer.\n\ncd ~/Documents/GitHub/NOAA-quarto-simple\n\nPublish to the gh-pages. In the terminal type\n\nquarto publish gh-pages\nThis is going to render your webpage and then push the _site contents to the gh-pages branch."
+    "objectID": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
+    "href": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
+    "title": "Rendering with Code",
+    "section": "Render locally and publish to gh-pages branch",
+    "text": "Render locally and publish to gh-pages branch\nTo render locally and push up to the gh-pages branch, open a terminal window and then cd to the directory with the Quarto project. Type this in the terminal:\nquarto render gh-pages"
   },
   {
-    "objectID": "content/publishing.html#dont-like-using-gh-pages",
-    "href": "content/publishing.html#dont-like-using-gh-pages",
-    "title": "Publishing",
-    "section": "Don’t like using gh-pages?",
-    "text": "Don’t like using gh-pages?\nIn some cases, you don’t want your website on the gh-pages branch. For example, if you are creating releases and you want the website pages archived in that release, then you won’t want your website pages on the gh-pages branch.\nHere are the changes you need to make if you to avoid gh-pages branch.\n\nAt the top of _quarto.yml add the following:\n\nproject: \n  type: website\n  output-dir: docs\n\nOn GitHub under Settings &gt; Pages set pages to be made from the main branch and the docs directory.\nMake sure docs is not listed in .gitignore\nPublish the site the first time locally using quarto publish from the terminal\nChange the GitHub Action because you can’t use quarto publish gh-pages. You’ll need to push to the main branch yourself (in the GitHub Action)\n\non:\n  push:\n    branches: main\n\nname: Render and Publish\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    env:\n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}\n\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v2 \n        \n      - name: Set up R (needed for Rmd)\n        uses: r-lib/actions/setup-r@v2\n\n      - name: Install packages (needed for Rmd)\n        run: Rscript -e 'install.packages(c(\"rmarkdown\", \"knitr\", \"jsonlite\"))'\n\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n        with:\n          # To install LaTeX to build PDF book \n          # tinytex: true \n          # uncomment below and fill to pin a version\n          # version: 0.9.600\n      \n      - name: Render Quarto Project\n        uses: quarto-dev/quarto-actions/render@v2\n        with:\n          to: html\n\n      - name: Set up Git\n        run: |\n          git config --local user.email \"actions@github.com\"\n          git config --local user.name \"GitHub Actions\"\n\n      - name: Commit all changes and push\n        run: |\n          git add -A && git commit -m 'Build site' || echo \"No changes to commit\"\n          git push origin || echo \"No changes to commit\""
+    "objectID": "content/hobbies.html",
+    "href": "content/hobbies.html",
+    "title": "Hobbies",
+    "section": "",
+    "text": "Usr. profile on MUBI: 1,340 Ratings & Reviews, so far.\n\nMy favorite movies:\n+ Les Quatro Cents Coupes.  François Truffaut (1959).\n\n+ Blade Runner. Ridley Scott (1982).\n\n\n\n\n\n\n\nEn décembre 1999, MK2 Productions absorbe Les Films du Carrosse.\nThe Ladd Company released Blade Runner in 1982.\n\n\n\n\n\n\n\n\n\n\nA must-read reference in the world of film criticism:\n\n300 movies that Rober Ebert -website- consider worthy of beign called “great”.\nRoger Ebert was a film critic for the Chicago Sun-Times from 1967 until his death in 2013."
+  },
+  {
+    "objectID": "content/hobbies.html#cinema",
+    "href": "content/hobbies.html#cinema",
+    "title": "Hobbies",
+    "section": "",
+    "text": "Usr. profile on MUBI: 1,340 Ratings & Reviews, so far.\n\nMy favorite movies:\n+ Les Quatro Cents Coupes.  François Truffaut (1959).\n\n+ Blade Runner. Ridley Scott (1982).\n\n\n\n\n\n\n\nEn décembre 1999, MK2 Productions absorbe Les Films du Carrosse.\nThe Ladd Company released Blade Runner in 1982.\n\n\n\n\n\n\n\n\n\n\nA must-read reference in the world of film criticism:\n\n300 movies that Rober Ebert -website- consider worthy of beign called “great”.\nRoger Ebert was a film critic for the Chicago Sun-Times from 1967 until his death in 2013."
+  },
+  {
+    "objectID": "content/hobbies.html#lexicography",
+    "href": "content/hobbies.html#lexicography",
+    "title": "Hobbies",
+    "section": "➔ Lexicography",
+    "text": "➔ Lexicography\nEnglish Spanish Dictionary\n\nDescription:\n\nThis is not intended to be a professional dictionary by any means. This is just a collection of English vocabulary used in news, debates and opinion shows. The goal is to learn the intricacies of building an online dictionary. I’m just an enthuisiast of lexicography. Work in progress :-)\n\nLink: ❛ Lexonomy English - Spanish Dictionary ❜]\nTools I recommend:\n\nSkell - Sketch Engine for language learning\nWord Hippo"
+  },
+  {
+    "objectID": "content/hobbies.html#nephologist",
+    "href": "content/hobbies.html#nephologist",
+    "title": "Hobbies",
+    "section": "➔ Nephologist",
+    "text": "➔ Nephologist\n\nCloud observation & appreciation:\n\nClouds spotted in Guadalajara Jalisco Mexico: FRONT\nClouds spotted in Guadalajara Jalisco Mexico: Collection Builder"
+  },
+  {
+    "objectID": "content/hobbies.html#photography",
+    "href": "content/hobbies.html#photography",
+    "title": "Hobbies",
+    "section": "➔ Photography",
+    "text": "➔ Photography\n\nFlicker image showcase\nInstagram"
+  },
+  {
+    "objectID": "content/hobbies.html#music",
+    "href": "content/hobbies.html#music",
+    "title": "Hobbies",
+    "section": "➔ Music",
+    "text": "➔ Music\n\nMy Playlist on Spotify"
+  },
+  {
+    "objectID": "content/hobbies.html#dogs",
+    "href": "content/hobbies.html#dogs",
+    "title": "Hobbies",
+    "section": "➔ Dogs",
+    "text": "➔ Dogs\nI'm a dog person\n\n   .-------------.       .    .   *       *   \n  /_/_/_/_/_/_/_/ \\         *       .   )    .\n //_/_/_/_/_/_// _ \\ __          .        .   \n/_/_/_/_/_/_/_/|/ \\.' .`-o                    \n |             ||-'(/ ,--'                    \n |             ||  _ |                        \n |             ||'' ||                        \n |_____________|| |_|L                     hjm\n\nJazz (2014-2023)\n\nKirby (2023-)"
   }
 ]
