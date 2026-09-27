@@ -10,6 +10,7 @@ page-layout: full
 ## ➔ Personal Information
 
 * **Born:** 	July 6th, 1972 / México City (CDMX, former D.F.).
+* **Where the air is clear**
 * **Citizenship:** 	Mexican
 
 ::: {.callout-tip}
